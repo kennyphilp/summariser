@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
-from home.models import OpenAIModel
+from home.models import SupportedOpenAIModel
 
 class Command(BaseCommand):
     help = 'Assign AI models to users for access control'
@@ -39,9 +39,9 @@ class Command(BaseCommand):
             return
 
         if assign_all:
-            models = OpenAIModel.objects.all()
+            models = SupportedOpenAIModel.objects.all()
         else:
-            models = OpenAIModel.objects.filter(name__in=model_names)
+            models = SupportedOpenAIModel.objects.filter(name__in=model_names)
             
         if not models.exists():
             self.stdout.write(

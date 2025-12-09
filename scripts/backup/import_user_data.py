@@ -40,7 +40,7 @@ django.setup()
 from django.contrib.auth.models import User, Group, Permission
 from django.contrib.contenttypes.models import ContentType
 from django.db import transaction
-from home.models import OpenAIModel
+from  summarizer.home.models import SupportedOpenAIModel
 
 
 def import_permissions(permissions_data):
@@ -109,7 +109,7 @@ def import_openai_models(models_data):
     print(f"Importing {len(models_data)} OpenAI models...")
     
     for model_data in models_data:
-        model, created = OpenAIModel.objects.update_or_create(
+        model, created = SupportedOpenAIModel.objects.update_or_create(
             name=model_data['name'],
             defaults={
                 'input_cost': Decimal(model_data['input_cost']),

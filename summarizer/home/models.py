@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class OpenAIModel(models.Model):
+class SupportedOpenAIModel(models.Model):
     """
     Model representing an OpenAI language model with cost information and user assignments.
 
@@ -44,7 +44,7 @@ class OpenAIModel(models.Model):
         return self.name
 
     class Meta:
-        """Meta options for the OpenAIModel."""
+        """Meta options for the SupportedOpenAIModel."""
         verbose_name = "OpenAI Model"
         verbose_name_plural = "OpenAI Models"
         ordering = ['name']

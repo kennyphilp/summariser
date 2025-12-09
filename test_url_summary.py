@@ -22,7 +22,7 @@ import importlib.util
 spec = importlib.util.spec_from_file_location("home.models", "/Users/kenny.w.philp/training/djangotest/summarizer/home/models.py")
 home_models = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(home_models)
-OpenAIModel = home_models.OpenAIModel
+SupportedOpenAIModel = home_models.SupportedOpenAIModel
 from django.contrib.auth.models import User
 
 def test_url_summary():
@@ -38,9 +38,9 @@ def test_url_summary():
 
     # Get or create a test model
     try:
-        model = OpenAIModel.objects.get(name='gpt-3.5-turbo')
-    except OpenAIModel.DoesNotExist:
-        model = OpenAIModel.objects.create(
+        model = SupportedOpenAIModel.objects.get(name='gpt-3.5-turbo')
+    except SupportedOpenAIModel.DoesNotExist:
+        model = SupportedOpenAIModel.objects.create(
             name='gpt-3.5-turbo', 
             input_cost=0.0015,  # $0.0015 per 1K tokens
             output_cost=0.002

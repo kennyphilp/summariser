@@ -12,7 +12,7 @@ from django.views.decorators.http import require_POST
 from django.conf import settings
 from django.utils import timezone
 import openai
-from .models import OpenAIModel
+from .models import SupportedOpenAIModel
 from .tts_utils import speak_summary, get_summary_audio_file, tts_manager, BrowserTTSTTS
 from .summarizer_service import SummaryService
 from .views_base import BaseSummarizationView

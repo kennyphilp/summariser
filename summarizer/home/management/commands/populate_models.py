@@ -1,11 +1,11 @@
 from django.core.management.base import BaseCommand
-from home.models import OpenAIModel
+from home.models import SupportedOpenAIModel
 
 class Command(BaseCommand):
     """
     Django management command to populate the database with OpenAI model pricing data.
 
-    This command creates or updates OpenAIModel instances with current pricing
+    This command creates or updates SupportedOpenAIModel instances with current pricing
     information for various OpenAI models including GPT series, O1/O3 models,
     and specialized models like audio and image processing.
 
@@ -69,7 +69,7 @@ class Command(BaseCommand):
 
         # Create or update each model in the database
         for data in models_data:
-            OpenAIModel.objects.get_or_create(
+            SupportedOpenAIModel.objects.get_or_create(
                 name=data['name'],
                 defaults={
                     'input_cost': data['input'],

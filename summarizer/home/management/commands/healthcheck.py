@@ -1,6 +1,8 @@
 from django.core.management.base import BaseCommand
-from django.contrib.auth.models import User
-from home.models import OpenAIModel
+from django.contrib.auth import get_user_model
+from summarizer.home.models import SupportedOpenAIModel
+
+User = get_user_model()
 import os
 import openai
 
@@ -41,7 +43,7 @@ class Command(BaseCommand):
         self.stdout.write('\n2. Checking Database...')
         try:
             user_count = User.objects.count()
-            model_count = OpenAIModel.objects.count()
+            model_count = SupportedOpenAIModel.objects.count()
             self.stdout.write(self.style.SUCCESS(f'   ✓ Database accessible ({user_count} users, {model_count} models)'))
         except Exception as e:
             issues_found.append(f'Database error: {e}')
@@ -67,9 +69,9 @@ class Command(BaseCommand):
             issues_found.append(f'{count} users have no model assignments')
             self.stdout.write(self.style.WARNING(f'   ⚠ {count} users have no model assignments'))
             
-            if fix_issues and OpenAIModel.objects.exists():
+            if fix_issues and SupportedOpenAIModel.objects.exists():
                 # Assign a default model to users without assignments
-                default_model = OpenAIModel.objects.first()
+                default_model = SupportedOpenAIModel.objects.first()
                 for user in users_without_models:
                     user.assigned_models.add(default_model)
                 self.stdout.write(self.style.SUCCESS(f'   ✓ Fixed: Assigned {default_model.name} to {count} users'))

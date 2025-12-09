@@ -37,7 +37,7 @@ django.setup()
 
 from django.contrib.auth.models import User, Group, Permission
 from django.contrib.contenttypes.models import ContentType
-from home.models import OpenAIModel
+from summarizer.home.models import SupportedOpenAIModel
 
 
 def export_users():
@@ -96,7 +96,7 @@ def export_permissions():
 def export_openai_models():
     """Export OpenAI models and their user assignments."""
     models = []
-    for model in OpenAIModel.objects.all():
+    for model in SupportedOpenAIModel.objects.all():
         model_data = {
             'id': model.id,
             'name': model.name,

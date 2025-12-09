@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import OpenAIModel
+from .models import SupportedOpenAIModel
 
-@admin.register(OpenAIModel)
-class OpenAIModelAdmin(admin.ModelAdmin):
+@admin.register(SupportedOpenAIModel)
+class SupportedOpenAIModelAdmin(admin.ModelAdmin):
     """
     Admin interface for managing OpenAI models.
 
@@ -36,10 +36,10 @@ class UserModelAssignmentAdmin(admin.ModelAdmin):
     - Remove existing assignments
     - Search and filter assignments
     """
-    list_display = ('user', 'openaimodel', 'assignment_date')
-    list_filter = ('user', 'openaimodel')
-    search_fields = ('user__username', 'user__email', 'openaimodel__name')
-    autocomplete_fields = ['user', 'openaimodel']
+    list_display = ('user', 'supportedopenaimodel', 'assignment_date')
+    list_filter = ('user', 'supportedopenaimodel')
+    search_fields = ('user__username', 'user__email', 'supportedopenaimodel__name')
+    autocomplete_fields = ['user', 'supportedopenaimodel']
 
     def assignment_date(self, obj):
         """Display when the assignment was created."""

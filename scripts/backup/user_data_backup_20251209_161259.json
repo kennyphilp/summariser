@@ -1,0 +1,624 @@
+{
+  "export_date": "2025-12-09T16:12:59.956627",
+  "django_version": "6.0",
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "pbkdf2_sha256$1200000$6rbLEeQVwlMWxzI6iVeCyd$NnZy5ZtBFtiI6pfItqMstU5XnQE42agvIEyNviSVTFg=",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "date_joined": "2025-12-09T15:44:31.981568+00:00",
+      "last_login": "2025-12-09T15:46:15.798123+00:00",
+      "groups": [],
+      "user_permissions": []
+    },
+    {
+      "id": 2,
+      "username": "kennyphilp@gmail.com",
+      "email": "kennyphilp@gmail.com",
+      "password": "pbkdf2_sha256$1200000$WYiexWEJjgxTmxcDeps7S8$/k1xkrOU20nvSdXvcDA4kWyrrgVsF6PT2P96qUvNHH8=",
+      "first_name": "Kenny",
+      "last_name": "Philp",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "date_joined": "2025-12-09T15:45:47+00:00",
+      "last_login": "2025-12-09T15:47:57.452581+00:00",
+      "groups": [],
+      "user_permissions": []
+    }
+  ],
+  "groups": [],
+  "permissions": [
+    {
+      "id": 1,
+      "name": "Can add log entry",
+      "codename": "add_logentry",
+      "content_type": {
+        "app_label": "admin",
+        "model": "logentry"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Can change log entry",
+      "codename": "change_logentry",
+      "content_type": {
+        "app_label": "admin",
+        "model": "logentry"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Can delete log entry",
+      "codename": "delete_logentry",
+      "content_type": {
+        "app_label": "admin",
+        "model": "logentry"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Can view log entry",
+      "codename": "view_logentry",
+      "content_type": {
+        "app_label": "admin",
+        "model": "logentry"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Can add group",
+      "codename": "add_group",
+      "content_type": {
+        "app_label": "auth",
+        "model": "group"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Can change group",
+      "codename": "change_group",
+      "content_type": {
+        "app_label": "auth",
+        "model": "group"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Can delete group",
+      "codename": "delete_group",
+      "content_type": {
+        "app_label": "auth",
+        "model": "group"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Can view group",
+      "codename": "view_group",
+      "content_type": {
+        "app_label": "auth",
+        "model": "group"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Can add permission",
+      "codename": "add_permission",
+      "content_type": {
+        "app_label": "auth",
+        "model": "permission"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Can change permission",
+      "codename": "change_permission",
+      "content_type": {
+        "app_label": "auth",
+        "model": "permission"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Can delete permission",
+      "codename": "delete_permission",
+      "content_type": {
+        "app_label": "auth",
+        "model": "permission"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Can view permission",
+      "codename": "view_permission",
+      "content_type": {
+        "app_label": "auth",
+        "model": "permission"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Can add user",
+      "codename": "add_user",
+      "content_type": {
+        "app_label": "auth",
+        "model": "user"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Can change user",
+      "codename": "change_user",
+      "content_type": {
+        "app_label": "auth",
+        "model": "user"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Can delete user",
+      "codename": "delete_user",
+      "content_type": {
+        "app_label": "auth",
+        "model": "user"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Can view user",
+      "codename": "view_user",
+      "content_type": {
+        "app_label": "auth",
+        "model": "user"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Can add content type",
+      "codename": "add_contenttype",
+      "content_type": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Can change content type",
+      "codename": "change_contenttype",
+      "content_type": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Can delete content type",
+      "codename": "delete_contenttype",
+      "content_type": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Can view content type",
+      "codename": "view_contenttype",
+      "content_type": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+      }
+    },
+    {
+      "id": 25,
+      "name": "Can add OpenAI Model",
+      "codename": "add_openaimodel",
+      "content_type": {
+        "app_label": "home",
+        "model": "openaimodel"
+      }
+    },
+    {
+      "id": 26,
+      "name": "Can change OpenAI Model",
+      "codename": "change_openaimodel",
+      "content_type": {
+        "app_label": "home",
+        "model": "openaimodel"
+      }
+    },
+    {
+      "id": 27,
+      "name": "Can delete OpenAI Model",
+      "codename": "delete_openaimodel",
+      "content_type": {
+        "app_label": "home",
+        "model": "openaimodel"
+      }
+    },
+    {
+      "id": 28,
+      "name": "Can view OpenAI Model",
+      "codename": "view_openaimodel",
+      "content_type": {
+        "app_label": "home",
+        "model": "openaimodel"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Can add session",
+      "codename": "add_session",
+      "content_type": {
+        "app_label": "sessions",
+        "model": "session"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Can change session",
+      "codename": "change_session",
+      "content_type": {
+        "app_label": "sessions",
+        "model": "session"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Can delete session",
+      "codename": "delete_session",
+      "content_type": {
+        "app_label": "sessions",
+        "model": "session"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Can view session",
+      "codename": "view_session",
+      "content_type": {
+        "app_label": "sessions",
+        "model": "session"
+      }
+    }
+  ],
+  "openai_models": [
+    {
+      "id": 35,
+      "name": "codex-mini-latest",
+      "input_cost": "1.500000",
+      "cached_input_cost": "0.375000",
+      "output_cost": "6.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 39,
+      "name": "computer-use-preview",
+      "input_cost": "3.000000",
+      "cached_input_cost": null,
+      "output_cost": "12.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 11,
+      "name": "gpt-4.1",
+      "input_cost": "2.000000",
+      "cached_input_cost": "0.500000",
+      "output_cost": "8.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 12,
+      "name": "gpt-4.1-mini",
+      "input_cost": "0.400000",
+      "cached_input_cost": "0.100000",
+      "output_cost": "1.600000",
+      "assigned_users": []
+    },
+    {
+      "id": 13,
+      "name": "gpt-4.1-nano",
+      "input_cost": "0.100000",
+      "cached_input_cost": "0.025000",
+      "output_cost": "0.400000",
+      "assigned_users": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 14,
+      "name": "gpt-4o",
+      "input_cost": "2.500000",
+      "cached_input_cost": "1.250000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 15,
+      "name": "gpt-4o-2024-05-13",
+      "input_cost": "5.000000",
+      "cached_input_cost": null,
+      "output_cost": "15.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 23,
+      "name": "gpt-4o-audio-preview",
+      "input_cost": "2.500000",
+      "cached_input_cost": null,
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 16,
+      "name": "gpt-4o-mini",
+      "input_cost": "0.150000",
+      "cached_input_cost": "0.075000",
+      "output_cost": "0.600000",
+      "assigned_users": []
+    },
+    {
+      "id": 24,
+      "name": "gpt-4o-mini-audio-preview",
+      "input_cost": "0.150000",
+      "cached_input_cost": null,
+      "output_cost": "0.600000",
+      "assigned_users": []
+    },
+    {
+      "id": 20,
+      "name": "gpt-4o-mini-realtime-preview",
+      "input_cost": "0.600000",
+      "cached_input_cost": "0.300000",
+      "output_cost": "2.400000",
+      "assigned_users": []
+    },
+    {
+      "id": 37,
+      "name": "gpt-4o-mini-search-preview",
+      "input_cost": "0.150000",
+      "cached_input_cost": null,
+      "output_cost": "0.600000",
+      "assigned_users": []
+    },
+    {
+      "id": 19,
+      "name": "gpt-4o-realtime-preview",
+      "input_cost": "5.000000",
+      "cached_input_cost": "2.500000",
+      "output_cost": "20.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 38,
+      "name": "gpt-4o-search-preview",
+      "input_cost": "2.500000",
+      "cached_input_cost": null,
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 2,
+      "name": "gpt-5",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 6,
+      "name": "gpt-5-chat-latest",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 9,
+      "name": "gpt-5-codex",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 3,
+      "name": "gpt-5-mini",
+      "input_cost": "0.250000",
+      "cached_input_cost": "0.025000",
+      "output_cost": "2.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 4,
+      "name": "gpt-5-nano",
+      "input_cost": "0.050000",
+      "cached_input_cost": "0.005000",
+      "output_cost": "0.400000",
+      "assigned_users": []
+    },
+    {
+      "id": 10,
+      "name": "gpt-5-pro",
+      "input_cost": "15.000000",
+      "cached_input_cost": null,
+      "output_cost": "120.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 36,
+      "name": "gpt-5-search-api",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 1,
+      "name": "gpt-5.1",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 5,
+      "name": "gpt-5.1-chat-latest",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 8,
+      "name": "gpt-5.1-codex",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 7,
+      "name": "gpt-5.1-codex-max",
+      "input_cost": "1.250000",
+      "cached_input_cost": "0.125000",
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 34,
+      "name": "gpt-5.1-codex-mini",
+      "input_cost": "0.250000",
+      "cached_input_cost": "0.025000",
+      "output_cost": "2.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 21,
+      "name": "gpt-audio",
+      "input_cost": "2.500000",
+      "cached_input_cost": null,
+      "output_cost": "10.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 22,
+      "name": "gpt-audio-mini",
+      "input_cost": "0.600000",
+      "cached_input_cost": null,
+      "output_cost": "2.400000",
+      "assigned_users": []
+    },
+    {
+      "id": 40,
+      "name": "gpt-image-1",
+      "input_cost": "5.000000",
+      "cached_input_cost": "1.250000",
+      "output_cost": null,
+      "assigned_users": []
+    },
+    {
+      "id": 41,
+      "name": "gpt-image-1-mini",
+      "input_cost": "2.000000",
+      "cached_input_cost": "0.200000",
+      "output_cost": null,
+      "assigned_users": []
+    },
+    {
+      "id": 17,
+      "name": "gpt-realtime",
+      "input_cost": "4.000000",
+      "cached_input_cost": "0.400000",
+      "output_cost": "16.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 18,
+      "name": "gpt-realtime-mini",
+      "input_cost": "0.600000",
+      "cached_input_cost": "0.060000",
+      "output_cost": "2.400000",
+      "assigned_users": []
+    },
+    {
+      "id": 25,
+      "name": "o1",
+      "input_cost": "15.000000",
+      "cached_input_cost": "7.500000",
+      "output_cost": "60.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 33,
+      "name": "o1-mini",
+      "input_cost": "1.100000",
+      "cached_input_cost": "0.550000",
+      "output_cost": "4.400000",
+      "assigned_users": []
+    },
+    {
+      "id": 26,
+      "name": "o1-pro",
+      "input_cost": "150.000000",
+      "cached_input_cost": null,
+      "output_cost": "600.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 28,
+      "name": "o3",
+      "input_cost": "2.000000",
+      "cached_input_cost": "0.500000",
+      "output_cost": "8.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 29,
+      "name": "o3-deep-research",
+      "input_cost": "10.000000",
+      "cached_input_cost": "2.500000",
+      "output_cost": "40.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 32,
+      "name": "o3-mini",
+      "input_cost": "1.100000",
+      "cached_input_cost": "0.550000",
+      "output_cost": "4.400000",
+      "assigned_users": []
+    },
+    {
+      "id": 27,
+      "name": "o3-pro",
+      "input_cost": "20.000000",
+      "cached_input_cost": null,
+      "output_cost": "80.000000",
+      "assigned_users": []
+    },
+    {
+      "id": 30,
+      "name": "o4-mini",
+      "input_cost": "1.100000",
+      "cached_input_cost": "0.275000",
+      "output_cost": "4.400000",
+      "assigned_users": []
+    },
+    {
+      "id": 31,
+      "name": "o4-mini-deep-research",
+      "input_cost": "2.000000",
+      "cached_input_cost": "0.500000",
+      "output_cost": "8.000000",
+      "assigned_users": []
+    }
+  ]
+}
