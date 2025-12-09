@@ -1,0 +1,70 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Summarize Web Page - AI-Powered Text Summarizer{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>AI-Powered Web Page Summarizer</h1>
+    <div class="panels">
+        <div class="panel input-panel">
+            <h2>Enter URL to Summarize</h2>
+            <form method="post" id="summary-form" {% if not models %}style="opacity: 0.5; pointer-events: none;"{% endif %}>
+                {% csrf_token %}
+                <input type="url" name="url" class="url-input" placeholder="https://example.com" value="{{ url }}" required {% if not models %}disabled{% endif %} />
+                <button type="submit" class="cta-button full-width" {% if not models %}disabled{% endif %}>Summarize</button>
+            </form>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="message {{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="panel output-panel">
+            <h2>Summary</h2>
+            <div class="summary">
+                {% if summary %}
+                    <div class="summary-meta">
+                        <span class="word-count" id="word-count">{{ summary|wordcount }} words</span>
+                        <span class="summary-status">Complete</span>
+                    </div>
+                    <p id="summary-text">{{ summary }}</p>
+                    <div class="tts-controls">
+                        <button type="button" id="speak-btn" class="tts-button" title="Read summary aloud">
+                            SPEAK
+                        </button>
+                        <button type="button" id="copy-btn" class="tts-button" title="Copy to clipboard" onclick="copyToClipboard('summary-text')">
+                            COPY
+                        </button>
+                        <button type="button" id="blog-btn" class="tts-button" title="Generate blog post from summary">
+                            CREATE BLOG
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="empty-state">
+                        <div class="empty-icon">URL</div>
+                        <h3>No Summary Yet</h3>
+                        <p>Enter a URL and click "Summarize" to get started.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="model-selector">
+        <label for="model">Select Model:</label>
+        {% if models %}
+            <select name="model" id="model" form="summary-form">
+                {% for model in models %}
+                    <option value="{{ model.name }}" {% if model.name == selected_model %}selected{% endif %}>{{ model.name }}</option>
+                {% endfor %}
+            </select>
+        {% else %}
+            <select name="model" id="model" form="summary-form" disabled>
+                <option value="">No models available</option>
+            </select>
+            <p class="no-models-message">No AI models are currently assigned to your account. Please contact an administrator.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

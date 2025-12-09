@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI-Powered Text Summarizer{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/navbar.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="{% url 'index' %}">AI Summarizer</a>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a href="#" class="dropdown-toggle">Summarize ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'summary' %}">Free Text</a></li>
+                        <li><a href="{% url 'url_summary' %}">URL</a></li>
+                    </ul>
+                </li>
+                {% if user.is_superuser %}
+                <li class="navbar-item dropdown">
+                    <a href="#" class="dropdown-toggle">Admin ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/">Django Admin</a></li>
+                        <li><a href="/admin/home/openaimodel/">Models</a></li>
+                    </ul>
+                </li>
+                {% endif %}
+            </ul>
+            <div class="navbar-auth">
+                <div class="theme-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                {% if user.is_authenticated %}
+                <div class="user-dropdown">
+                    <button class="user-button">{{ user.username }} ▼</button>
+                    <ul class="user-menu">
+                        <li><a href="{% url 'profile' %}">Profile</a></li>
+                        <li><a href="{% url 'logout' %}">Sign Out</a></li>
+                    </ul>
+                </div>
+                {% else %}
+                <a href="{% url 'login' %}" class="auth-link">Sign In</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{% static 'home/js/navbar.js' %}"></script>
+    <script src="{% static 'home/js/tts.js' %}"></script>
+</body>
+</html>

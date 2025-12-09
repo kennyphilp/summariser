@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<section class="hero">
+    <h1>AI-Powered Text Summarizer</h1>
+    <p>Transform long articles, documents, and content into concise, accurate summaries with the power of artificial intelligence. Fast, reliable, and easy to use.</p>
+    <div class="hero-buttons">
+        <a href="{% url 'summary' %}" class="cta-button">Summarize Text</a>
+        <a href="{% url 'url_summary' %}" class="cta-button">Summarize Web Page</a>
+    </div>
+</section>
+{% endblock %}
